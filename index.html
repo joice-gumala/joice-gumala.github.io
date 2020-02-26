@@ -1,10 +1,624 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Menduca</title>
-</head>
-<body>
-  <h1>Hello Menduca!</h1>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menduca</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <!-- Styles -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" media="screen" />
+  </head>
+  <body>
+    <!-- Loader -->
+
+    <div class="loader">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>
+
+    <!-- Header -->
+
+    <header class="navbar">
+      <div class="container">
+        <a href="#home" onclick="scrollto('home')" class="brand js-target-scroll">
+          <img id="logo" width="120px" src="img/logo-white.png" alt="">
+        </a>
+
+        <!-- Navbar Collapse -->
+
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#nav-collapse"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Navigation Desctop -->
+
+        <nav class="nav-desctop hidden-xs hidden-sm">
+          <ul class="nav-desctop-list">
+            <li>
+              <a href="#home" onclick="scrollto('home')">Home</a>
+            </li>
+            <li>
+              <a href="#services" onclick="scrollto('services')">Services</a>
+            </li>
+            <li>
+              <a href="#features" onclick="scrollto('features')">Features</a>
+            </li>
+            <li>
+              <a href="#mentors" onclick="scrollto('mentors')">Mentors</a>
+            </li>
+            <li>
+              <a href="#awards" onclick="scrollto('awards')">Awards</a>
+            </li>
+            <li>
+              <a href="#request" data-toggle="modal" class="btn" style="color: white !important;">Sign up</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Navigation Mobile -->
+
+        <nav class="nav-mobile hidden-md hidden-lg">
+          <div class="collapse navbar-collapse" id="nav-collapse">
+            <ul class="nav-mobile-list">
+              <li>
+                <a onclick="scrollto('home')">Home</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Home -->
+
+    <main id="home" class="main">
+      <!-- Start revolution slider -->
+
+      <div class="rev_slider_wrapper">
+        <div id="rev_slider" class="rev_slider fullscreenbanner">
+          <ul>
+            <!-- Slide 1 -->
+
+            <li
+              data-transition="fade"
+              data-slotamount="default"
+              data-masterspeed="1000"
+              data-fsmasterspeed="1000"
+            >
+              <!-- Main image-->
+
+              <img
+                src="img/slider/hero.jpg"
+                data-bgparallax="7"
+                alt=""
+                data-bgposition="center center"
+                data-bgfit="cover"
+                data-bgrepeat="no-repeat"
+                class="rev-slidebg"
+              />
+
+              <!-- Layer 1 -->
+
+              <div
+                class="slider-title tp-caption"
+                data-x="['center','center','center','center']"
+                data-hoffset="['0']"
+                data-y="['middle','middle','middle','middle']"
+                data-voffset="['-80']"
+                data-textAlign="['center','center','center','center']"
+                data-fontsize="['70', '60','50','40']"
+                data-lineheight="['80','70', '60','50']"
+                data-height="none"
+                data-whitespace="nowrap"
+                data-transform_idle="o:1;"
+                data-transform_in="x:[105%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;"
+                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
+                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                data-start="500"
+                data-splitout="none"
+                data-responsive_offset="on"
+                data-elementdelay="0.05"
+              >
+                Maximize <i>Your Chance</i>
+              </div>
+
+              <!-- Layer 2 -->
+
+              <div
+                class="slider-text tp-caption"
+                data-x="['center','center','center','center']"
+                data-hoffset="['0']"
+                data-y="['middle','middle','middle','middle']"
+                data-voffset="['20']"
+                data-textAlign="['center','center','center','center']"
+                data-fontsize="['18']"
+                data-lineheight="['32']"
+                data-whitespace="normal"
+                data-width="['900','700','600','500']"
+                data-transform_idle="o:1;"
+                data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;"
+                data-transform_out="opacity:0;s:1000;s:1000;"
+                data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                data-start="1500"
+                data-splitin="none"
+                data-splitout="none"
+              >
+                <span style="opacity:0.9"
+                  >Maximize your chances to get into your dream school and job
+                  with Menduca. We are an on-demand online mentorship program
+                  that connects you with more than 100 mentors from various
+                  schools and industries. Increase your chance by 4X to get into
+                  your dream school and dream job!
+                </span>
+              </div>
+
+              <!-- Layer 3 -->
+
+              <div
+                class="tp-caption"
+                data-x="['center','center','center','center']"
+                data-hoffset="['0']"
+                data-y="['middle','middle','middle','middle']"
+                data-voffset="['125']"
+                data-width="none"
+                data-fontsize="['15']"
+                data-height="none"
+                data-whitespace="nowrap"
+                data-transform_idle="o:1;"
+                data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+                data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);"
+                data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;"
+                data-transform_out="y:50px;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                data-mask_out="x:inherit;y:inherit;"
+                data-start="1500"
+                data-splitin="on"
+                data-splitout="none"
+                data-responsive_offset="on"
+              >
+                <a href="#request" class="btn" data-toggle="modal"
+                  >Sign up now</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div onclick="scrollto('services')" class="mouse-helper">
+        <i class="icon ion-mouse"></i>
+      </div>
+    </main>
+
+    <div class="content">
+      <section id="services" class="section">
+        <div class="container">
+          <div class="flex-md-top row-space row-base row">
+            <div class="col-space col-base col-md-6">
+              <img alt="" class="img-responsive w90" src="img/services.svg" />
+            </div>
+            <div class="col-space col-base col-md-6">
+              <h3 class="section-title">
+                Our Services
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+              <section class="pt-sm">
+                <div class="row-base row">
+                  <div class="col-base col-sm-6">
+                    <i class="icon text-primary icon-rocket"></i>
+                    <h6>Starting Your Journey</h6>
+                    <p>
+                      Career plan.
+                    </p>
+                  </div>
+                  <div class="col-base col-sm-6">
+                    <i class="icon text-primary icon-library2"></i>
+                    <h6>Pre-admission</h6>
+                    <p>
+                      School Selection, Acceptance Evaluation, GMAT/GRE
+                      Strategy, Program Comparison
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <section class="pt-sm">
+                <div class="row-base row">
+                  <div class="col-base col-sm-6">
+                    <i class="icon text-primary icon-graduation-hat"></i>
+                    <h6>School Admission</h6>
+                    <p>
+                      Application Strategy, CV Review, Essay Review,
+                      Recommendation Letter Review, Mock-Interview, Waitlist
+                      Strategy
+                    </p>
+                  </div>
+                  <div class="col-base col-sm-6">
+                    <i class="icon text-primary icon-briefcase"></i>
+                    <h6>Job Application</h6>
+                    <p>
+                      Case Interview, IB Interview, PE Interview, VC Interview,
+                      PM Interview, Google Interview, Amazon Interview
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+
+      <section id="features" class="section bg-light">
+        <div class="container">
+          <div class="flex-md-middle row-space row-base row">
+            <div class="col-space col-base col-md-6">
+              <h3 class="section-title">Our Features</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <section class="pt-sm">
+                <div class="row-base row">
+                  <div class="col-base col-sm-6">
+                    <i class="icon text-primary icon-users2"></i>
+                    <h6>Choosing Mentor</h6>
+                    <p>
+                      Choose your own mentor
+                    </p>
+                  </div>
+                  <div class="col-base col-sm-6">
+                    <i class="icon text-primary icon-bubbles"></i>
+                    <h6>Chat Feature</h6>
+                    <p>
+                      Chat directly with your mentor, anytime!
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <section class="pt-sm">
+                <div class="row-base row">
+                  <div class="col-base col-sm-6">
+                    <i class="icon text-primary icon-upload2"></i>
+                    <h6>Upload Document</h6>
+                    <p>
+                      Submit your docs less than 1 minute
+                    </p>
+                  </div>
+                  <div class="col-base col-sm-6">
+                    <i class="icon text-primary icon-star"></i>
+                    <h6>Mentor Rating</h6>
+                    <p>
+                      Share your thoughts about your mentor in one-click away!
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-space col-base col-md-6">
+              <img alt="" class="img-responsive w100" src="img/features.svg" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team bg-dark section text-white pb-5">
+        <div class="container">
+          <div class="row">
+            <header class="text-center col-md-8 col-md-offset-2">
+              <h2 class="section-title text-white">Let's start your journey with us!</h2>
+              <a href="#request" data-toggle="modal" class="btn btn-b-white">Sign up now</a>
+            </header>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clients -->
+
+      <section id="mentors" class="clients section pb-sm">
+        <div class="container">
+          <div class="row">
+            <header class="text-center col-md-8 col-md-offset-2">
+              <h2 class="section-title">Our Mentors</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
+                maxime tempora quaerat ratione iste. Nulla excepturi voluptatem
+                error repellat tenetur facilis, veniam illum.
+              </p>
+            </header>
+          </div>
+        </div>
+        <div class="section-content">
+          <div class="container">
+            <div class="col-md-10 col-lg-6 col-md-offset-1 col-lg-offset-3">
+              <div class="client-carousel-wrp">
+                <div class="client-carousel js-client-carousel">
+                  <div class="client">
+                    <img
+                      alt=""
+                      class="img-circle"
+                      width="100"
+                      src="img/mentors/nacitta-kanyandara.jpg"
+                    />
+                    <p class="client-text">
+                      <i class="client-name">Nacitta Kanyandara</i><br />
+                      The Wharton School - Indonesian
+                    </p>
+                    <div class="client-background">
+                      <div>
+                        <p class="client-text"><b>Graduated from</b></p>
+                        <img
+                          class="client-background-img"
+                          src="img/mentors/wharton.png"
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <p class="client-text"><b>Works at</b></p>
+                        <img
+                          class="client-background-img"
+                          src="img/mentors/grab.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="client">
+                    <img alt="" class="img-circle" width="100" src="img/mentors/michael-patchen.jpg" />
+                    <p class="client-text">
+                      <i class="client-name">Michael Patchen</i><br />
+                      MIT Sloan School of Management - American
+                    </p>
+                    <div class="client-background">
+                      <div>
+                        <p class="client-text"><b>Graduated from</b></p>
+                        <img class="client-background-img" src="img/mentors/mit-sloan.jpg" alt="" />
+                      </div>
+                      <div>
+                        <p class="client-text"><b>Works at</b></p>
+                        <img class="client-background-img" src="img/mentors/wiliam-blair.png" alt="" />
+                      </div>
+                    </div>
+                  </div><div class="client">
+                    <img alt="" class="img-circle" width="100" src="img/mentors/jenny-orlova.jpg" />
+                    <p class="client-text">
+                      <i class="client-name">Jenny Orlova</i><br />
+                      London Business School - Russian/American
+                    </p>
+                    <div class="client-background">
+                      <div>
+                        <p class="client-text"><b>Graduated from</b></p>
+                        <img class="client-background-img" src="img/mentors/LBS.png" alt="" />
+                      </div>
+                      <div>
+                        <p class="client-text"><b>Works at</b></p>
+                        <img class="client-background-img" src="img/mentors/cintana-education.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners -->
+
+      <section id="awards" class="partners section-sm">
+        <div class="container">
+          <div class="row">
+            <header class="text-center col-md-8 col-md-offset-2">
+              <h2 class="section-title">Awards & Achievements</h2>
+            </header>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+          <div class="js-partners-carousel">
+            <div class="partner">
+              <img alt="" src="img/awards/award-01.png" />
+              <p class="partner-text">
+                Selected out of 15,000 applications to join Startup School Advisor Track
+              </p>
+            </div>
+            <div class="partner">
+              <img alt="" src="img/awards/award-02.png" />
+              <p class="partner-text">
+                Won 1st prize at Global Startup Super League in Beijing
+              </p>
+            </div>
+            <div class="partner">
+              <img alt="" src="img/awards/award-03.png" />
+              <p class="partner-text">
+                Won "Best Viable Project" in Entrepreneurship Summer School out of 50 teams
+              </p>
+            </div>
+            <div class="partner">
+              <img alt="" src="img/awards/award-04.png" />
+              <p class="partner-text">
+                Selected as one of 28 brightest entrepreneurs transforming the future of learning
+              </p>
+            </div>
+            <div class="partner">
+              <img alt="" src="img/awards/award-05.png" />
+              <p class="partner-text">
+                Awarded full scholarship given to female EdTech founders to attend China Immersion Program
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner -->
+
+      <section class="promo bg-primary section-sm">
+        <div class="container rel-1">
+          <h2 class="promo-title text-white">
+            Let's start your journey with us!</i>
+          </h2>
+          <a href="#request" data-toggle="modal" class="btn btn-b-white"
+            >Sign up now</a
+          >
+        </div>
+      </section>
+
+      <!-- Footer -->
+
+      <footer id="footer" class="footer">
+        <div class="footer-bottom bg-primary text-white">
+          <div class="container">
+            <div class="copyrights">
+              © Copyright 2020 Menduca. All Rights Reserved
+            </div>
+            <ul class="social-list">
+              <li><a href="https://www.facebook.com/MBAMentorSEA" target="_blank" class="fa fa-facebook"></a></li>
+              <li><a href="https://www.linkedin.com/company/mbamentor/" target="_blank" class="fa fa-linkedin"></a></li>
+              <li><a href="https://www.youtube.com/channel/UCaPT-Wm_rzN0MFSnhLjD_Tg" target="_blank" class="fa fa-youtube"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Modals -->
+
+    <div id="request" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" data-dismiss="modal" aria-label="Close"
+              >&times;</span
+            >
+            <h2 class="modal-title">Send request</h2>
+          </div>
+          <div class="modal-body">
+            <form class="form-request js-ajax-form">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Name" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Email *"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  rows="3"
+                  name="message"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-block">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals success -->
+
+    <div id="success" class="modal modal-message fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" data-dismiss="modal" aria-label="Close"
+              ><span aria-hidden="true">&times;</span></span
+            >
+            <h2 class="modal-title">Thank you</h2>
+            <p class="modal-subtitle">Your message is successfully sent...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals error -->
+
+    <div id="error" class="modal modal-message fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" data-dismiss="modal" aria-label="Close"
+              ><span aria-hidden="true">&times;</span></span
+            >
+            <h2 class="modal-title">Sorry</h2>
+            <p class="modal-subtitle">Something went wrong</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    
+    <script type="text/javascript">
+      function scrollto(div) {
+        $('html,body').animate(
+          {
+            scrollTop: $("#" + div).offset().top
+          }, 'slow');
+      }
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.viewport.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.js"></script>
+
+    <!-- SLIDER REVOLUTION -->
+    <script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
+    <script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5x EXTENSIONS   -->
+    <script src="js/rev-slider/revolution.extension.actions.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.migration.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.video.min.js"></script>
+    <script src="js/rev-slider-init.js"></script>
+    <script src="js/interface.js"></script>
+  </body>
 </html>
