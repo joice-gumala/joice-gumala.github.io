@@ -22,6 +22,7 @@
       rel="stylesheet"
     />
     <link href="css/style.css" rel="stylesheet" media="screen" />
+    <link href="css/bootstrap.min.css.css" rel="stylesheet" media="screen" />
   </head>
   <body>
     <!-- Loader -->
@@ -37,8 +38,12 @@
 
     <header class="navbar">
       <div class="container">
-        <a href="#home" onclick="scrollto('home')" class="brand js-target-scroll">
-          <img id="logo" width="120px" src="img/logo-white.png" alt="">
+        <a
+          href="#home"
+          onclick="scrollto('home')"
+          class="brand js-target-scroll"
+        >
+          <img id="logo" width="120px" src="img/logo-white.png" alt="" />
         </a>
 
         <!-- Navbar Collapse -->
@@ -75,7 +80,13 @@
               <a href="#awards" onclick="scrollto('awards')">Awards</a>
             </li>
             <li>
-              <a href="#request" data-toggle="modal" class="btn" style="color: white !important;">Sign up</a>
+              <a
+                href="#request"
+                data-toggle="modal"
+                class="btn"
+                style="color: white !important;"
+                >Sign up</a
+              >
             </li>
           </ul>
         </nav>
@@ -170,11 +181,10 @@
                 data-splitout="none"
               >
                 <span style="opacity:0.9"
-                  >Maximize your chances to get into your dream school and job
-                  with Menduca. We are an on-demand online mentorship program
-                  that connects you with more than 100 mentors from various
-                  schools and industries. Increase your chance by 4X to get into
-                  your dream school and dream job!
+                  >We are an on-demand online mentorship program that connects
+                  you with more than 100 mentors from various schools and
+                  industries. Increase your chance by 4X to get into your dream
+                  school and dream job!
                 </span>
               </div>
 
@@ -201,9 +211,26 @@
                 data-splitout="none"
                 data-responsive_offset="on"
               >
-                <a href="#request" class="btn" data-toggle="modal"
-                  >Sign up now</a
+                <form
+                  id="user-signup"
+                  class="form-request form-row pt-20"
+                  action="https://formspree.io/xeqkkojz"
+                  method="POST"
                 >
+                  <div class="form-group last" style="width: 70%">
+                    <input
+                      class="input-round"
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="Email *"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-block btn-hero">
+                    Sign up
+                  </button>
+                </form>
+                <p class="text-center pt-10">*Only for the first 100 people.</p>
               </div>
             </li>
           </ul>
@@ -235,7 +262,7 @@
                     <i class="icon text-primary icon-rocket"></i>
                     <h6>Starting Your Journey</h6>
                     <p>
-                      Career plan.
+                      Career Plan, Profile Enhancement, Career Advancement
                     </p>
                   </div>
                   <div class="col-base col-sm-6">
@@ -276,54 +303,61 @@
 
       <!-- Features -->
 
-      <section id="features" class="section bg-light">
+      <section id="features" class="section">
+        <div class="container">
+          <div class="row">
+            <header class="text-center col-md-8 col-md-offset-2">
+              <h2 class="section-title">How It Works?</h2>
+            </header>
+          </div>
+        </div>
+      </section>
+      <section class="section pt-0">
         <div class="container">
           <div class="flex-md-middle row-space row-base row">
             <div class="col-space col-base col-md-6">
-              <h3 class="section-title">Our Features</h3>
+              <h3 class="section-title">Select Service</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Select the right package from all-in-on “School Package” or spot
+                mentoring course “A La carte” based on your journey stage and
+                your needs
               </p>
-              <section class="pt-sm">
-                <div class="row-base row">
-                  <div class="col-base col-sm-6">
-                    <i class="icon text-primary icon-users2"></i>
-                    <h6>Choosing Mentor</h6>
-                    <p>
-                      Choose your own mentor
-                    </p>
-                  </div>
-                  <div class="col-base col-sm-6">
-                    <i class="icon text-primary icon-bubbles"></i>
-                    <h6>Chat Feature</h6>
-                    <p>
-                      Chat directly with your mentor, anytime!
-                    </p>
-                  </div>
-                </div>
-              </section>
-              <section class="pt-sm">
-                <div class="row-base row">
-                  <div class="col-base col-sm-6">
-                    <i class="icon text-primary icon-upload2"></i>
-                    <h6>Upload Document</h6>
-                    <p>
-                      Submit your docs less than 1 minute
-                    </p>
-                  </div>
-                  <div class="col-base col-sm-6">
-                    <i class="icon text-primary icon-star"></i>
-                    <h6>Mentor Rating</h6>
-                    <p>
-                      Share your thoughts about your mentor in one-click away!
-                    </p>
-                  </div>
-                </div>
-              </section>
             </div>
             <div class="col-space col-base col-md-6">
-              <img alt="" class="img-responsive w100" src="img/features.svg" />
+              <img alt="" class="img-responsive w100" src="img/works/1.svg" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="flex-md-middle row-space row-base row">
+            <div class="col-space col-base col-md-6 col-md-push-6">
+              <h3 class="section-title">Choose Mentor</h3>
+              <p>
+                Choose a mentor based on your preference: industry background,
+                job role, school, or nationalities!
+              </p>
+            </div>
+            <div class="col-space col-base col-md-6 col-md-pull-6">
+              <img alt="" class="img-responsive w100" src="img/works/2.svg" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="flex-md-middle row-space row-base row">
+            <div class="col-space col-base col-md-6">
+              <h3 class="section-title">Book and Start Mentoring</h3>
+              <p>
+                Experiencing the mentoring journey from scheduling meetings,
+                uploading documents, and or just a casual chat in one platform,
+                all in one place!
+              </p>
+            </div>
+            <div class="col-space col-base col-md-6">
+              <img alt="" class="img-responsive w100" src="img/works/3.svg" />
             </div>
           </div>
         </div>
@@ -333,8 +367,35 @@
         <div class="container">
           <div class="row">
             <header class="text-center col-md-8 col-md-offset-2">
-              <h2 class="section-title text-white">Let's start your journey with us!</h2>
-              <a href="#request" data-toggle="modal" class="btn btn-b-white">Sign up now</a>
+              <h2 class="section-title text-white">
+                Let's start your journey with us!
+              </h2>
+              <p>Sign up now and you will get <b>FREE 30-min mentoring</b></p>
+              <form
+                id="user-signup"
+                class="form-request form-row form-description"
+                action="https://formspree.io/xeqkkojz"
+                method="POST"
+              >
+                <div class="form-group last" style="width: 70%">
+                  <input
+                    class="input-round"
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Email *"
+                  />
+                </div>
+                <button type="submit" class="btn btn-b-white btn-hero">
+                  Sign up
+                </button>
+              </form>
+              <!-- <a href="#request" data-toggle="modal" class="btn btn-b-white"
+                >Sign up now</a
+              > -->
+              <p class="pt-10" style="font-size: small; margin-bottom: 0;">
+                *Only for the first 100 people.
+              </p>
             </header>
           </div>
         </div>
@@ -348,16 +409,16 @@
             <header class="text-center col-md-8 col-md-offset-2">
               <h2 class="section-title">Our Mentors</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
-                maxime tempora quaerat ratione iste. Nulla excepturi voluptatem
-                error repellat tenetur facilis, veniam illum.
+                100+ qualified mentors from 30+ nationalities and a wide range
+                of industries are ready to guide you to your dream school and
+                job!
               </p>
             </header>
           </div>
         </div>
         <div class="section-content">
           <div class="container">
-            <div class="col-md-10 col-lg-6 col-md-offset-1 col-lg-offset-3">
+            <div class="col-md-10 col-lg-10 col-md-offset-1">
               <div class="client-carousel-wrp">
                 <div class="client-carousel js-client-carousel">
                   <div class="client">
@@ -369,7 +430,7 @@
                     />
                     <p class="client-text">
                       <i class="client-name">Nacitta Kanyandara</i><br />
-                      The Wharton School - Indonesian
+                      The Wharton School<br />Indonesian
                     </p>
                     <div class="client-background">
                       <div>
@@ -391,87 +452,120 @@
                     </div>
                   </div>
                   <div class="client">
-                    <img alt="" class="img-circle" width="100" src="img/mentors/michael-patchen.jpg" />
+                    <img
+                      alt=""
+                      class="img-circle"
+                      width="100"
+                      src="img/mentors/pamela-chan.jpg"
+                    />
                     <p class="client-text">
-                      <i class="client-name">Michael Patchen</i><br />
-                      MIT Sloan School of Management - American
+                      <i class="client-name">Pamela Chan</i><br />
+                      Harvard Business School<br />Filipinos
                     </p>
                     <div class="client-background">
                       <div>
                         <p class="client-text"><b>Graduated from</b></p>
-                        <img class="client-background-img" src="img/mentors/mit-sloan.jpg" alt="" />
+                        <img
+                          class="client-background-img"
+                          src="img/mentors/harvard.png"
+                          alt=""
+                        />
                       </div>
                       <div>
                         <p class="client-text"><b>Works at</b></p>
-                        <img class="client-background-img" src="img/mentors/wiliam-blair.png" alt="" />
-                      </div>
-                    </div>
-                  </div><div class="client">
-                    <img alt="" class="img-circle" width="100" src="img/mentors/jenny-orlova.jpg" />
-                    <p class="client-text">
-                      <i class="client-name">Jenny Orlova</i><br />
-                      London Business School - Russian/American
-                    </p>
-                    <div class="client-background">
-                      <div>
-                        <p class="client-text"><b>Graduated from</b></p>
-                        <img class="client-background-img" src="img/mentors/LBS.png" alt="" />
-                      </div>
-                      <div>
-                        <p class="client-text"><b>Works at</b></p>
-                        <img class="client-background-img" src="img/mentors/cintana-education.png" alt="" />
+                        <img
+                          class="client-background-img"
+                          src="img/mentors/google.png"
+                          alt=""
+                        />
                       </div>
                     </div>
                   </div>
+                  <div class="client">
+                    <img
+                      alt=""
+                      class="img-circle"
+                      width="100"
+                      src="img/mentors/cyan-lee.jpg"
+                    />
+                    <p class="client-text">
+                      <i class="client-name">Cyan Lee</i><br />
+                      Cambridge Judge<br />Singaporean
+                    </p>
+                    <div class="client-background">
+                      <div>
+                        <p class="client-text"><b>Graduated from</b></p>
+                        <img
+                          class="client-background-img"
+                          src="img/mentors/cambridge-judge.png"
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <p class="client-text"><b>Works at</b></p>
+                        <img
+                          class="client-background-img"
+                          src="img/mentors/google.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="client">
+                    <img
+                      alt=""
+                      class="img-circle"
+                      width="100"
+                      src="img/mentors/fatya-azlika.jpg"
+                    />
+                    <p class="client-text">
+                      <i class="client-name">Fatya Azlika</i><br />
+                      London Business School<br />Indonesian
+                    </p>
+                    <div class="client-background">
+                      <div>
+                        <p class="client-text"><b>Graduated from</b></p>
+                        <img
+                          class="client-background-img"
+                          src="img/mentors/LBS.png"
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <p class="client-text"><b>Works at</b></p>
+                        <img
+                          class="client-background-img"
+                          src="img/mentors/gojek.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Partners -->
+      <!-- Mentor Sign Up -->
 
-      <section id="awards" class="partners section-sm">
+      <section class="section">
         <div class="container">
-          <div class="row">
-            <header class="text-center col-md-8 col-md-offset-2">
-              <h2 class="section-title">Awards & Achievements</h2>
-            </header>
-          </div>
-        </div>
-        <br>
-        <br>
-        <div class="container">
-          <div class="js-partners-carousel">
-            <div class="partner">
-              <img alt="" src="img/awards/award-01.png" />
-              <p class="partner-text">
-                Selected out of 15,000 applications to join Startup School Advisor Track
-              </p>
+          <div class="flex-md-middle row-space row-base row">
+            <div class="col-space col-base col-md-6">
+              <img
+                class="img-responsive"
+                style="margin-left: auto; margin-right: auto;"
+                src="/img/bottom.svg"
+                alt=""
+              />
             </div>
-            <div class="partner">
-              <img alt="" src="img/awards/award-02.png" />
-              <p class="partner-text">
-                Won 1st prize at Global Startup Super League in Beijing
-              </p>
-            </div>
-            <div class="partner">
-              <img alt="" src="img/awards/award-03.png" />
-              <p class="partner-text">
-                Won "Best Viable Project" in Entrepreneurship Summer School out of 50 teams
-              </p>
-            </div>
-            <div class="partner">
-              <img alt="" src="img/awards/award-04.png" />
-              <p class="partner-text">
-                Selected as one of 28 brightest entrepreneurs transforming the future of learning
-              </p>
-            </div>
-            <div class="partner">
-              <img alt="" src="img/awards/award-05.png" />
-              <p class="partner-text">
-                Awarded full scholarship given to female EdTech founders to attend China Immersion Program
-              </p>
+            <div class="col-space col-base col-md-6 mentor-interest">
+              <h3>Interested in being on of the Mentors?</h3>
+              <a href="#mentor-request" data-toggle="modal" class="btn"
+                >Contact here</a
+              >
             </div>
           </div>
         </div>
@@ -481,12 +575,20 @@
 
       <section class="promo bg-primary section-sm">
         <div class="container rel-1">
-          <h2 class="promo-title text-white">
-            Let's start your journey with us!</i>
-          </h2>
-          <a href="#request" data-toggle="modal" class="btn btn-b-white"
-            >Sign up now</a
-          >
+          <div class="col-md-8">
+            <h2 class="promo-title text-white">
+              Let's start your journey with us!
+            </h2>
+            <p class="promo-description">
+              Sign up no. The first 100 people will get
+              <b>FREE 30-min mentoring</b>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="#request" data-toggle="modal" class="btn btn-b-white">
+              Sign up now
+            </a>
+          </div>
         </div>
       </section>
 
@@ -496,19 +598,37 @@
         <div class="footer-bottom bg-primary text-white">
           <div class="container">
             <div class="copyrights">
-              © Copyright 2020 Menduca. All Rights Reserved
+              © 2020 Menduca. All Rights Reserved
             </div>
             <ul class="social-list">
-              <li><a href="https://www.facebook.com/MBAMentorSEA" target="_blank" class="fa fa-facebook"></a></li>
-              <li><a href="https://www.linkedin.com/company/mbamentor/" target="_blank" class="fa fa-linkedin"></a></li>
-              <li><a href="https://www.youtube.com/channel/UCaPT-Wm_rzN0MFSnhLjD_Tg" target="_blank" class="fa fa-youtube"></a></li>
+              <li>
+                <a
+                  href="https://www.facebook.com/MBAMentorSEA"
+                  target="_blank"
+                  class="fa fa-facebook"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/mbamentor/"
+                  target="_blank"
+                  class="fa fa-linkedin"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCaPT-Wm_rzN0MFSnhLjD_Tg"
+                  target="_blank"
+                  class="fa fa-youtube"
+                ></a>
+              </li>
             </ul>
           </div>
         </div>
       </footer>
     </div>
 
-    <!-- Modals -->
+    <!-- User Sign Up Modals -->
 
     <div id="request" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -517,13 +637,19 @@
             <span class="close" data-dismiss="modal" aria-label="Close"
               >&times;</span
             >
-            <h2 class="modal-title">Send request</h2>
+            <h2 class="modal-title">Sign Up</h2>
+            <p class="form-description">
+              Sign up no. The first 100 people will get
+              <b>FREE 30-min mentoring</b>
+            </p>
           </div>
-          <div class="modal-body">
-            <form class="form-request js-ajax-form">
-              <div class="form-group">
-                <input type="text" name="name" placeholder="Name" />
-              </div>
+          <div class="modal-body pt-10">
+            <form
+              id="user-signup-modal"
+              class="form-request"
+              action="https://formspree.io/xeqkkojz"
+              method="POST"
+            >
               <div class="form-group">
                 <input
                   type="email"
@@ -532,15 +658,50 @@
                   placeholder="Email *"
                 />
               </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-block">
+                  Sign up
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mentor Sign Up Modals -->
+
+    <div id="mentor-request" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" data-dismiss="modal" aria-label="Close"
+              >&times;</span
+            >
+            <h2 class="modal-title">Mentor Sign Up</h2>
+            <p class="form-description">
+              Interested in being on of the Mentors? Sign up now!
+            </p>
+          </div>
+          <div class="modal-body pt-10">
+            <form
+              id="mentor-signup"
+              class="form-request"
+              action="https://formspree.io/mvorrgzv"
+              method="POST"
+            >
               <div class="form-group">
-                <textarea
-                  rows="3"
-                  name="message"
-                  placeholder="Message"
-                ></textarea>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Email *"
+                />
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-block">Submit</button>
+                <button type="submit" class="btn btn-block">
+                  Sign up
+                </button>
               </div>
             </form>
           </div>
@@ -581,15 +742,6 @@
     </div>
 
     <!-- SCRIPTS -->
-    
-    <script type="text/javascript">
-      function scrollto(div) {
-        $('html,body').animate(
-          {
-            scrollTop: $("#" + div).offset().top
-          }, 'slow');
-      }
-    </script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

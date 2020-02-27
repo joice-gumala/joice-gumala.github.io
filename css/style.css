@@ -355,6 +355,19 @@ textarea.input-round {
   margin-bottom: 2.5em;
 }
 
+.form-row {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-description {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .mc-label .fa {
   font-size: 1.2em;
   margin-right: 0.2em;
@@ -436,6 +449,11 @@ label.error {
   color: #343434;
   border: 2px solid rgba(35, 35, 35, 0.1);
   background-color: transparent;
+}
+
+.btn-hero {
+  width: auto;
+  height: 5em;
 }
 
 /* 1.5 Icons */
@@ -705,6 +723,22 @@ label.error {
   padding-top: 0;
 }
 
+.pt-10 {
+  padding-top: 1em;
+}
+
+.pt-20 {
+  padding-top: 2em;
+}
+
+.pt-30 {
+  padding-top: 3em;
+}
+
+.pt-40 {
+  padding-top: 4em;
+}
+
 .pb-0 {
   padding-bottom: 0;
 }
@@ -723,6 +757,10 @@ label.error {
 
 .pb-sm {
   padding-bottom: 4em;
+}
+
+.w70 {
+  width: 70%;
 }
 
 .w80 {
@@ -1295,6 +1333,7 @@ label.error {
 .tp-caption {
   padding: 0 20px;
   text-align: center;
+  width: 80vw;
 }
 
 .slider-title {
@@ -2277,7 +2316,7 @@ img.mfp-img {
 }
 
 .client-background {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -2389,6 +2428,11 @@ img.mfp-img {
 
 .promo-title.text-gray {
   color: #4b4b4b;
+}
+
+.promo-description {
+  float: left;
+  margin-bottom: 0;
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -2741,6 +2785,10 @@ img.mfp-img {
   margin-top: 2em;
 }
 
+.mentor-interest {
+  text-align: center;
+}
+
 /* ------------------------------------------------------------------------------- */
 /*  18. Responsive styles
 /* ------------------------------------------------------------------------------- */
@@ -2785,6 +2833,15 @@ img.mfp-img {
 
   .promo .btn {
     float: right;
+  }
+
+  .form-row {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  .tp-caption {
+    width: 50vw;
   }
 }
 
@@ -2932,6 +2989,10 @@ img.mfp-img {
     left: 0;
     height: 100%;
     padding: 5% 7%;
+  }
+
+  .mentor-interest {
+    text-align: left;
   }
 }
 
