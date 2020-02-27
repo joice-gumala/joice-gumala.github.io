@@ -1333,7 +1333,12 @@ label.error {
 .tp-caption {
   padding: 0 20px;
   text-align: center;
-  width: 80vw;
+}
+
+.tp-form {
+  padding: 0 20px !important;
+  text-align: center !important;
+  width: 80vw !important;
 }
 
 .slider-title {
@@ -2840,8 +2845,8 @@ img.mfp-img {
     justify-content: space-evenly;
   }
 
-  .tp-caption {
-    width: 55vw;
+  .tp-form {
+    width: 50vw !important;
   }
 }
 
