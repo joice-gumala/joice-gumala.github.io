@@ -235,13 +235,15 @@
 	-------------------------------------------------------------------------------*/
 
   $(".js-client-carousel").owlCarousel({
-    items: 1,
-    itemsDesktop: [1400, 1],
-    itemsDesktopSmall: [980, 1],
+    items: 3,
+    itemsDesktop: [1400, 3],
+    itemsDesktopSmall: [980, 3],
     itemsTablet: [768, 1],
     itemsMobile: [479, 1],
     pagination: true,
-    autoHeight: true
+    autoHeight: true,
+    loop: true,
+    center: true
   });
 
   /*-------------------------------------------------------------------------------
@@ -291,5 +293,73 @@
         }
       });
     });
+  }
+
+  function scrollto(div) {
+    $("html,body").animate(
+      {
+        scrollTop: $("#" + div).offset().top
+      },
+      "slow"
+    );
+  }
+
+  // User sign up
+  window.addEventListener("DOMContentLoaded", function() {
+    // get the form elements defined in your form HTML above
+
+    var userForm = document.getElementById("user-signup");
+    var userFormModal = document.getElementById("user-signup-modal");
+    var mentorForm = document.getElementById("mentor-signup");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+      userForm.reset();
+      userFormModal.reset();
+      mentorForm.reset();
+      $(".modal").modal("hide");
+      $("#success").modal("show");
+    }
+
+    function error() {
+      $(".modal").modal("hide");
+      $("#error").modal("show");
+    }
+
+    // handle the form submission event
+
+    userForm.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(userForm);
+      ajax(userForm.method, userForm.action, data, success, error);
+    });
+
+    userFormModal.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(userFormModal);
+      ajax(userFormModal.method, userFormModal.action, data, success, error);
+    });
+
+    mentorForm.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(mentorForm);
+      ajax(mentorForm.method, mentorForm.action, data, success, error);
+    });
+  });
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
   }
 })(jQuery);
