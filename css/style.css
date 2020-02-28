@@ -1887,6 +1887,11 @@ img.mfp-img {
   background-size: cover;
 }
 
+#services ul {
+  list-style-position: inside;
+  list-style-type: circle;
+}
+
 /*-------------------------------------------------------------------------------
   8. Blog
 -------------------------------------------------------------------------------*/
@@ -1932,18 +1937,20 @@ img.mfp-img {
 
 .blog-info {
   padding: 3em 3em 2em 3em;
+  text-align: center;
 }
 
 .blog-rubric {
   font-family: "Montserrat", sans-serif;
-  color: #9a9a9a;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
+  text-transform: capitalize;
+  font-size: 1.5em;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  /* letter-spacing: 0.1em; */
   display: inline-block;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  color: #3b3b3b;
+  /* text-align: center; */
 }
 
 .blog-rubric:hover {
@@ -1952,8 +1959,8 @@ img.mfp-img {
 }
 
 .blog-info .blog-title {
-  font-weight: 700;
-  font-size: 1.375em;
+  /* font-weight: 700;
+  font-size: 1.375em; */
   line-height: 1.5;
   margin-top: 0;
 }
